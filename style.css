@@ -1,0 +1,349 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main {
+  padding-bottom: 20px;
+  margin-top: 120px; /* لإبعاد المحتوى عن navbar الثابت */
+}
+.navbar {
+  display: flex;
+  background-color: rgb(98, 98, 235);
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.5s;
+  height: 100px;
+}
+
+.links {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    flex-direction: row;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.logo{
+    flex: 0 0 auto;
+    left: 10px;
+}
+
+.navbar  .logo .img{
+    height: 50px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+
+.toggle-button {
+  display: block;
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .links {
+        display: block;
+        position: static;
+        background-color: transparent;
+        flex-direction: column;
+        padding: 0;
+    }
+    .toggle-button {
+        display: none;
+    }
+
+    .navbar .logo {
+      margin-right: auto;
+    }
+  
+    .navbar button {
+      display: block;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: none;
+      cursor: pointer;
+    }
+  
+    .navbar button:hover {
+      background-color: #ddd;
+    }
+  
+    .navbar button.active {
+      background-color: #ccc;
+    }
+  
+    .navbar button.active + .links {
+      display: block;
+    }
+    
+  }
+  .container {
+    display: flex;
+    margin-top: 100px;
+    flex-direction: row; 
+    height: calc(100vh - 50px); 
+    margin-top: 50px; 
+}
+  .right-section {
+    flex: 2;
+    background-image: url('bg3.svg'); /* استبدل برابط الصورة الخاص بك */
+    background-size: cover; /* لتغطية الخلفية بالكامل */
+    background-position: center; /* لتحديد موضع الصورة */
+    width: 50%; /* ارتفاع الديف */
+    height: 700px; ;
+    margin: auto;
+    display: flex; /* استخدام الـ Flexbox لمركز النص */
+    align-items:center; /* محاذاة عمودية */
+    justify-content:center; /* محاذاة أفقية */
+    color: white; /* لون النص */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* ظل للنص */
+}
+.left-section {
+  flex: 2;
+  height: 700px;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.box-container{
+  width: 40%;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+ .box {
+  padding: 35px 0 0 0;
+  border-radius: 5px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: centers;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+  margin-top: 45px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#002759), to(#002b64));
+  background: linear-gradient(to bottom, #002759, #002b64);
+}
+
+.img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ .img-box img {
+  width: 120px;
+  border-radius: 100%;
+  border: 5px solid #ffffff;
+}
+
+ .detail-box {
+  margin: 25px 0;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+ .box .detail-box h5 {
+  color: #00bbf0;
+  font-weight: 600;
+  position: relative;
+}
+
+ .box .social_box {
+  padding: 10px 45px 20px 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+ .box .social_box a {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+ .social_box a:hover {
+  color: #00bbf0;
+}
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+.about_section {
+  background-color: #00204a;
+  color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          justify-content: center;
+}
+.about_section .img-box img {
+  max-width: 100%;
+}
+
+.about_section .detail-box h3 {
+  font-weight: bold;
+}
+
+.about_section .detail-box p {
+  margin-top: 15px;
+}
+
+.about_section .detail-box a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #00bbf0;
+  color: #ffffff;
+  border-radius: 0px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 15px;
+}
+
+.about_section .detail-box a:hover {
+  background-color: #007fa4;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
